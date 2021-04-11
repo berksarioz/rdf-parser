@@ -1,0 +1,17 @@
+@prefix : <http://example.org/entity/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ssh: <http://example.org/ssh#> .
+@prefix animal: <http://example.org/animal#> .
+
+:Alice rdf:type foaf:Person .
+:Alice foaf:nick "Alice" .
+:Alice foaf:knows _:b1 .
+_:b1 rdf:type foaf:Person .
+_:b1 foaf:nick "Bob" .
+_:b2 foaf:nick "Eve" .
+_:b2 foaf:nick "The_Interloper" .
+_:b3 ssh:keytype "rsa" .
+_:b3 ssh:owner :Alice .
+_:b4 rdf:type animal:Cat .
+_:b5 ssh:owner _:b2 .
